@@ -1,0 +1,45 @@
+@use '../variables' as vars;
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  background-color: vars.$backgroundColor;
+
+  .header__burger {
+    display: block;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer; /* Курсор нажатия */
+
+    .burger-bar {
+      display: block;
+      width: 100%;
+      height: 3px; 
+      background-color: vars.$whiteColor; 
+      margin: 3px 0;
+      transition: all 0.3s ease; 
+    }
+
+    &.active {
+        .burger-bar:nth-child(1) {
+          transform: rotate(45deg) translate(4px, 3px);
+        }
+  
+        .burger-bar:nth-child(2) {
+          opacity: 0; /* Вторая полоска исчезает */
+        }
+  
+        .burger-bar:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
+    }
+  }
+@media (max-width: 768px) {
+  .header__burger {
+    display: block; /* Показываем бургер на мобильных */
+  }
+}
