@@ -1,6 +1,14 @@
+@use '../variables' as colorText;
+@use '../media.scss' as media;
+
 main {
     width: 375px;
-    height: 500px;
+    height: 665px;
+
+    @include media.media-medium {
+        width: 768px;
+        height: 984px;
+    }
 }
 
 main div {
@@ -9,10 +17,48 @@ main div {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../assets/img/two_girl.png');
     background-size: cover;
 background-position: center;
+
+@include media.media-medium {
+width: 100%;
+}
 }
 
 main p {
-    margin-top: 200px;
-    font-size: 14px;
+    position: relative;
+    font-family: "Onest", sans-serif;
     font-weight: 400;
+    font-size: 14px;
+    width: 150px;
+    margin-top: 400px;
+    font-weight: 400;
+
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        left: -20px;
+        bottom: -20px;
+height: 0.5px;
+background-color: colorText.$whiteColor;
+    }
+
+    @include media.media-medium {
+        font-size: 18px;
+        font-weight: 500;
+        width: 200px;
+        margin-top: 500px;
+    }
+}
+
+main h1 {
+    width: 260px;
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 400;
+
+    @include media.media-medium {
+        font-size: 80px;
+        width: 500px;
+    }
 }

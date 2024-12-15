@@ -1,6 +1,6 @@
 @use './media' as vars;
 @use './variables' as color;
-@use './fonts' as fonts;
+
 * { 
     margin: 0;
     padding: 0;
@@ -8,7 +8,10 @@
 }
 
 body {
-font-family: fonts.$font-secondary-family;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
   color: color.$whiteColor;
 }
 

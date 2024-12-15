@@ -1,18 +1,1 @@
-// Определение переменных для шрифтов
-$font-primary-family: "Onest", sans-serif;
-$font-secondary-family: "Playfair Display", serif;
 
-// Карты стилей для шрифтов
-$font-Onest-style: (
-  font-family: $font-primary-family,
-  font-optical-sizing: auto,
-  font-weight: 600,
-  font-style: normal
-);
-
-$font-Playfair-style: (
-  font-family: $font-secondary-family,
-  font-optical-sizing: auto,
-  font-weight: 700,
-  font-style: normal
-);
