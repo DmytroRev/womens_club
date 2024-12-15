@@ -1,7 +1,8 @@
-@use 'normalize';
-@use 'variables';
-@use 'mixins';
-@use 'defaults';
+@use './normalize';
+@use './variables' as vars; /* Подключаем переменные с псевдонимом */
+@use './mixins';
+@use './defaults';
+@use './media.scss';
 
-@use 'components/header';
-
+@use 'components/sectionHeader';
+@use 'components/sectionMain';

@@ -1,13 +1,30 @@
 @use '../variables' as vars;
+@use '../media' as media;
 
 header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  padding: 10px 15px;
   justify-content: space-between;
   align-items: center;
   background-color: vars.$backgroundColor;
 
+  @include media.media-medium {
+    padding: 15px 20px;
+  }
+
+  @include media.media-large {
+    padding: 20px 25px;
+  }
+
+  & div {
+    gap: 10px;
+  }
+
   .header__burger {
     display: block;
-    width: 30px;
+    width: 25px;
     height: 20px;
     position: relative;
     background: none;
@@ -18,14 +35,16 @@ header {
       display: block;
       width: 100%;
       height: 3px; 
-      background-color: vars.$whiteColor; 
+      background-color: vars.$goldColor; 
+      border-radius: 5px;
       margin: 3px 0;
       transition: all 0.3s ease; 
     }
 
     &.active {
         .burger-bar:nth-child(1) {
-          transform: rotate(45deg) translate(4px, 3px);
+          transform: rotate(45deg) translate(4px, 4px);
+          transform-origin: center;
         }
   
         .burger-bar:nth-child(2) {
@@ -33,7 +52,8 @@ header {
         }
   
         .burger-bar:nth-child(3) {
-          transform: rotate(-45deg) translate(5px, -5px);
+          transform: rotate(-45deg) translate(4px, -5px);
+          transform-origin: center;
         }
       }
     }

@@ -1,12 +1,56 @@
+@use './media' as vars;
+@use './variables' as color;
+@use './fonts' as fonts;
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+font-family: fonts.$font-secondary-family;
+  color: color.$whiteColor;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 15px; 
+  
+    @include vars.media-small {
+      max-width: 375px;
+      padding: 10px 20px;
+    }
+  
+    @include vars.media-medium {
+      max-width: 768px;
+      padding: 15px 25px;
+    }
+  
+    @include vars.media-large {
+      max-width: 1158px;
+      padding: 20px 30px;
+    }
+  
+    @include vars.media-xlarge {
+      max-width: 100%;
+      padding: 25px 35px;
+    }
+  }
+
+  
+  
+
 .icon {
     width: 35px;
     height: 35px;
 }
 
-.container {
-    max-width: 375px;
-    padding: 10px 20px;
-}
 
 .d-flex  {
     display: flex;
